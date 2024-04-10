@@ -1,3 +1,5 @@
+#Austin Spangler
+
 if __name__ == '__main__':
     def Encode():
         EncodedPswrd = ""
@@ -16,14 +18,28 @@ if __name__ == '__main__':
         print(EncodedPswrd)
 
     while True:
-        Pswrd = (input("Please enter an 8 digit password:"))
 
-        try:
-            if len(Pswrd) == 8:
-                break
-            else:
+        print("Menu")
+        print("_____________")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        userchoice = input("Please enter an option:")
+        if userchoice == 1:
+            Pswrd = (input("Please enter an 8 digit password:"))
+
+            try:
+                if len(Pswrd) == 8:
+                    break
+                else:
+                    print("Please enter your password to encode:")
+            except ValueError:
                 print("Please enter a valid password")
-        except ValueError:
-            print("Please enter a valid size")
-    Encode(Pswrd)
+            print("Your password has been encoded and stored!")
+            Encode(Pswrd)
+
+
+        if userchoice == 3:
+
+
 
