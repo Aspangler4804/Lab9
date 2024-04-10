@@ -40,6 +40,15 @@ if __name__ == '__main__':
 
 
         if userchoice == 3:
+            print("hi")
 
 
+def encode(ori_number):
+    finished = ""
+    for num in ori_number:
+        new = int(num) - 3
+        finished += str(new)
+    return print(finished)
+
+    encode(Pswrd)
 
